@@ -1,5 +1,11 @@
 package com.qa.testcases;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -32,7 +38,7 @@ public class loginPagetest extends Base_Setup {
 	public void validatelogintitletest() {
 		
 		String title = login.logintitle();
-		Assert.assertEquals(title, ".com+ User login");
+		AssertJUnit.assertEquals(title, ".com+ User login");
 	
 	}
 	

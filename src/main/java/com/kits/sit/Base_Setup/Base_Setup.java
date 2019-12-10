@@ -40,8 +40,8 @@ public class Base_Setup {
 			System.setProperty("webdriver.chrome.driver","C:\\work\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();
 			
-		}else if(browserName.equals("IE")) {
-			System.setProperty("webdriver.chrome.driver","C:\\work\\chromedriver_win32\\chromedriver.exe");
+		}else if(browserName.equals("FF")) {
+			System.setProperty("webdriver.gecko.driver","C:\\work\\chromedriver_win32\\chromedriver.exe");
 			
 		}
 		Actions action = new Actions(driver);

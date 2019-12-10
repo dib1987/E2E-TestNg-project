@@ -1,5 +1,11 @@
 package com.qa.testcases;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.testng.annotations.AfterMethod;
@@ -10,8 +16,6 @@ import com.kits.sit.Base_Setup.Base_Setup;
 import com.qa.pages.homePage;
 import com.qa.pages.locationPage;
 import com.qa.pages.loginPage;
-
-import junit.framework.Assert;
 
 public class locationpagetest extends Base_Setup {
 	
@@ -38,7 +42,7 @@ public class locationpagetest extends Base_Setup {
 	public void verifylocationpagetitletest() {
 		
 		String title = loc.locationpagetitle();
-		Assert.assertEquals(title, ".com+ Select your location");
+		AssertJUnit.assertEquals(title, ".com+ Select your location");
 	}
 	
 	@Test(priority=2)

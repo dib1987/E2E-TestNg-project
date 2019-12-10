@@ -1,5 +1,11 @@
 package com.qa.testcases;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -42,7 +48,7 @@ public class HomePageTest extends Base_Setup {
 		//String title = homepage1.verifyhomepagetitle();
 		//Assert.assertEquals(title, ".com+");
 		String title = homepage.verifyhomepagetitle();
-		Assert.assertEquals(title, ".com+");
+		AssertJUnit.assertEquals(title, ".com+");
 	}
 	
 	@Test(priority=2)
