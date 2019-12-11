@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.qa.ExtentReportListener.AutomationExtentReport"/>
-    <listener class-name="com.qa.Listener.Listeners"/>
-    <listener class-name="com.qa.analyzer.MyTransformer"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <test thread-count="2" name="ChromeTest(failed)" parallel="methods">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.qa.testcases.loginPagetest">
+      <class name="com.qa.testcases.loginPagetest2">
         <methods>
+          <include name="validatelogintitletest"/>
+          <include name="initialization"/>
           <include name="teardown"/>
-          <include name="setup"/>
           <include name="verifylogintest"/>
         </methods>
-      </class> <!-- com.qa.testcases.loginPagetest -->
+      </class> <!-- com.qa.testcases.loginPagetest2 -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- ChromeTest(failed) -->
+  <test thread-count="2" name="IETest(failed)" parallel="methods">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="com.qa.testcases.loginPagetest2">
+        <methods>
+          <include name="validatelogintitletest"/>
+          <include name="initialization"/>
+          <include name="teardown"/>
+          <include name="verifylogintest"/>
+        </methods>
+      </class> <!-- com.qa.testcases.loginPagetest2 -->
+    </classes>
+  </test> <!-- IETest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
