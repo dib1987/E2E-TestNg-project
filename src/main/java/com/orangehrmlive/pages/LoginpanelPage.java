@@ -1,14 +1,12 @@
 package com.orangehrmlive.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import static org.testng.Assert.assertTrue;
 
-import com.orangehrmlive.setup.Base_Setup;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
+import com.orangehrmlive.setup.Base_Setup;
 
 public class LoginpanelPage extends Base_Setup {
 	
@@ -51,40 +49,14 @@ public class LoginpanelPage extends Base_Setup {
 		String actualmsg = Errormessage1.getText();
 		System.out.println(actualmsg);
 		String expectedmsg = "Username cannot be empty";
-		Assert.assertEquals(actualmsg, expectedmsg,"message not matched");
-		
-		
-		}
+		assertTrue(actualmsg.contains(expectedmsg),"message not matched");	
+	}
 	
-	// Home page is the landing page so this method should return home page class object //
-	
+	//	Home page is the landing page so this method should return home page class object
     public Home_DashboardPage verify_succesfull_login() {
-    	
     	UserName.sendKeys("admin");
-    	
     	Password1.sendKeys("admin123");
-    	
     	loginbutton1.click();
-    	
-    	
-    	
 		return new Home_DashboardPage();
-		
-		
-		
-		
-		
-		}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
+	}
 }
