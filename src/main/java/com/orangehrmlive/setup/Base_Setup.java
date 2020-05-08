@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
 public class Base_Setup {
@@ -15,7 +16,7 @@ public class Base_Setup {
 	
 	
 	
-	public static WebDriver driver;
+	public WebDriver driver;
 	public static Properties prop;
 	
 	public Base_Setup() {
@@ -25,6 +26,7 @@ public class Base_Setup {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream("C:\\work\\DemoProject\\src\\main\\java\\Property\\config.properties");
 			prop.load(ip);
+			initialization();
 			
 			
 		}catch(FileNotFoundException e) {
@@ -35,12 +37,13 @@ public class Base_Setup {
 		}
 	}
 	
-	public static void initialization() {
+	private void initialization() {
 		
 		String browserName = prop.getProperty("browser");
 		if(browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver","C:\\work\\chromedriver_win32\\chromedriver.exe");
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			driver = (WebDriver) new ChromeDriver(options);
 			
 		}else if(browserName.equals("FF")) {
 			System.setProperty("webdriver.gecko.driver","C:\\work\\chromedriver_win32\\chromedriver.exe");
