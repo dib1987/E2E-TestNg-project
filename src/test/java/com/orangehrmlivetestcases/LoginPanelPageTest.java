@@ -17,12 +17,10 @@ import com.orangehrmlive.test.setup.BaseTests;
 public class LoginPanelPageTest extends BaseTests{
 
 	@Test
-	public void validatesuccesfulloginTest() {		
-		/*
-		 * Home_DashboardPage homeDashboard = loginPanelPage.userLogin("Admin",
-		 * "admin123"); assertTrue(homeDashboard.getWelcomeMessage().contains("Admin")
-		 * ,"Usuario no realizo login con exito");
-		 */
+	public void validateSuccessLoginTest() {
+		 Home_DashboardPage homeDashboard = loginPanelPage.userLogin("Admin",
+		 "admin123"); assertTrue(homeDashboard.getWelcomeMessage().contains("Admin")
+		 ,"Usuario no realizo login con exito");
 	}
 
 	

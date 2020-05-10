@@ -1,8 +1,7 @@
 package com.orangehrmlive.setup;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -10,24 +9,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import static java.lang.String.format;
 
 public class DriverSetup {
 	
 	public WebDriver driver;
 	public static Properties prop;
 	
+	private static String WINDOWS_DRIVER = "driver/chromedriver.exe";
+	
 	public DriverSetup() {			
 		prop = new Properties();
 		String propFileName = "config.properties";
 		try {
-			InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);		
+			InputStream inputStream = new FileInputStream(propFileName);
 			if (inputStream !=null) {
 				prop.load(inputStream);
 				initialization();
 			}else {
-				throw new FileNotFoundException(
-						String.format("property file % not found in the classpath",propFileName));
+				throw new FileNotFoundException("property file not found in the classpath");
 			}
 		}catch (IOException ex) {
 			System.out.println(ex);
@@ -35,26 +35,19 @@ public class DriverSetup {
 	}
 	
 	private void initialization() {
-		
 		String browserName = prop.getProperty("browser");
 		switch (browserName.toLowerCase()){
-        case "chrome":
-            ChromeOptions options = new ChromeOptions();
-            WebDriverManager.chromedriver().setup();
-            if(!display) options.addArguments("--headless");
-            driver = new ChromeDriver(options);
-            break;
-        case "firefox":
-            FirefoxOptions firefoxOptions = new FirefoxOptions();
-            System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
-            if(!display) firefoxOptions.addArguments("--headless");
-            driver = new FirefoxDriver(firefoxOptions);
-            break;
-        default:
-            throw new IllegalArgumentException(String.format("The given browser %s, is not supported", browserName));
-    }
-    driver.manage().timeouts().implicitlyWait(WaitingTimeSetup.getTimeToImplicitlyWait(), TimeUnit.SECONDS);
-    driver.manage().timeouts().pageLoadTimeout(WaitingTimeSetup.getTimeForPageLoad(), TimeUnit.SECONDS);
+	        case "chrome":
+	            ChromeOptions options = new ChromeOptions();
+	            String sDriver =getClass().getClassLoader().getResource(WINDOWS_DRIVER).getFile();
+	            System.setProperty("webdriver.chrome.driver", urlDecode(sDriver) );
+	            driver = new ChromeDriver(options);
+	            break;	        
+	        default:
+	            throw new IllegalArgumentException(format("The given browser %s, is not supported", browserName));
+	    }
+		driver.manage().timeouts().implicitlyWait(WaitingTimeSetup.getTimeToImplicitlyWait(), TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(WaitingTimeSetup.getTimeForPageLoad(), TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));		
 	}
 	
@@ -62,7 +55,14 @@ public class DriverSetup {
 		return this.driver;
 	}
 	
-	
+	private static String urlDecode(String value)  {
+        try {
+            return java.net.URLDecoder.decode(value, StandardCharsets.UTF_8.name());
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return value;
+    }
 	
 }
 	

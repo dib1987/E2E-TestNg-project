@@ -62,3 +62,6 @@ local.properties
 # target and test-output
 target/
 test-output/
+
+#intellij idea
+.idea/
