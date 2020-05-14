@@ -25,6 +25,14 @@ public class loginPage extends Base_Setup {
 	@FindBy(xpath="//input[@type='submit']")
 	WebElement submitbutton;
 	
+	@FindBy(xpath="//*[@id='txtUsername']")
+	WebElement username;
+	
+	@FindBy(xpath="//*[@id='txtPassword']")
+	WebElement pwd;
+	
+	
+	
 	//Initialize the webelement//
 	
 	public loginPage() {
@@ -39,7 +47,9 @@ public class loginPage extends Base_Setup {
 		return driver.getTitle();
 	}
 	
-	public locationPage loginpage() throws IOException {
+	// This is data driven login //
+	
+	/*public locationPage loginpage() throws IOException {
 		
 		Testdata.setExcelFile(Path, SheetName);
 		userid.sendKeys(Testdata.getCelldata(1, 0));
@@ -48,6 +58,22 @@ public class loginPage extends Base_Setup {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		return new locationPage();
+		
+	}*/
+	
+	// This is login where user is hardcoded //
+	
+	public homepageDashboard login() {
+		
+		//username.sendKeys(prop.getProperty(username1));
+		
+		username.sendKeys("admin");
+		pwd.sendKeys("admin123");
+		
+		return new homepageDashboard();
+		
+		
+		
 		
 	}
 

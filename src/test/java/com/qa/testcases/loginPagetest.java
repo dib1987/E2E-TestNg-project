@@ -15,13 +15,13 @@ import org.testng.annotations.Test;
 
 import com.kits.sit.Base_Setup.Base_Setup;
 import com.qa.pages.homePage;
-import com.qa.pages.locationPage;
+import com.qa.pages.homepageDashboard;
 import com.qa.pages.loginPage;
 
 public class loginPagetest extends Base_Setup {
 	
-	loginPage login;
-	locationPage locationpage;
+	loginPage loginp;
+	homepageDashboard homepagedash;
 	
 	public loginPagetest() {
 		
@@ -31,14 +31,15 @@ public class loginPagetest extends Base_Setup {
 	@BeforeMethod
 	public void setup() {
 		initialization();
-		login = new loginPage();
+		loginp = new loginPage();
 	}
 	
 	@Test(priority=1)
 	public void validatelogintitletest() {
 		
-		String title = login.logintitle();
-		AssertJUnit.assertEquals(title, ".com+ User login");
+		String title = loginp.logintitle();
+		//AssertJUnit.assertEquals(title, ".com+ User login");
+		Assert.assertTrue(title.contains("OrangeHRM"), "Not matched");
 	
 	}
 	
@@ -47,7 +48,7 @@ public class loginPagetest extends Base_Setup {
 	@Test(priority=2)
 	public void verifylogintest() throws IOException {
 		
-		locationpage = login.loginpage();
+		homepagedash = loginp.login();
 	}
 	
 	@AfterMethod

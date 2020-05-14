@@ -14,13 +14,13 @@ import org.testng.annotations.Test;
 
 import com.kits.sit.Base_Setup.Base_Setup;
 import com.qa.pages.homePage;
-import com.qa.pages.locationPage;
+import com.qa.pages.homepageDashboard;
 import com.qa.pages.loginPage;
 
 public class locationpagetest extends Base_Setup {
 	
-	locationPage loc;
-	loginPage login;
+	homepageDashboard loc;
+	loginPage loginp;
 	homePage homepage;
 	
 	public locationpagetest() {
@@ -33,9 +33,9 @@ public class locationpagetest extends Base_Setup {
 	public void setup() throws IOException {
 		
 		initialization();
-		loc = new locationPage();
-		login = new loginPage();
-		login.loginpage();
+		loc = new homepageDashboard();
+		loginp = new loginPage();
+		loginp.login();
 	}
 	
 	@Test(priority=1)

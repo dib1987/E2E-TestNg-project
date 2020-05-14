@@ -15,13 +15,13 @@ import org.testng.annotations.Test;
 
 import com.kits.sit.Base_Setup.Base_Setup;
 import com.qa.pages.homePage;
-import com.qa.pages.locationPage;
+import com.qa.pages.homepageDashboard;
 import com.qa.pages.loginPage;
 
 public class HomePageTest extends Base_Setup {
 	
-	locationPage loc;
-	loginPage login;
+	homepageDashboard loc;
+	loginPage loginp;
 	homePage homepage;
 	
 	public HomePageTest() {
@@ -33,10 +33,10 @@ public class HomePageTest extends Base_Setup {
 	
 	public void setup() throws IOException, InterruptedException {
 		initialization();
-		login = new loginPage();
+		loginp = new loginPage();
 		homepage = new homePage();
-		loc = new locationPage();
-		login.loginpage();
+		loc = new homepageDashboard();
+		loginp.login();
 		loc.verifylocation();
 		
 		

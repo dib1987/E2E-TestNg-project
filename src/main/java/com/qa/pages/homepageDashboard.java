@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.kits.sit.Base_Setup.Base_Setup;
 
-public class locationPage extends Base_Setup {
+public class homepageDashboard extends Base_Setup {
 	
 	
 	@FindBy(xpath="//input[@id='location']")
@@ -20,7 +20,7 @@ public class locationPage extends Base_Setup {
 	
 	// Initializing the Page object //
 	
-	public locationPage() {
+	public homepageDashboard() {
 		
 		PageFactory.initElements(driver, this);
 	}

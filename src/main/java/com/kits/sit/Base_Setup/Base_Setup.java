@@ -21,7 +21,7 @@ public class Base_Setup {
 		try {
 			
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("C:\\Users\\475742\\eclipse-workspace\\Automation\\src\\main\\java\\com\\qa\\property\\config.properties");
+			FileInputStream ip = new FileInputStream("C:\\work\\Automation Learning\\Automation-testing-practise\\src\\main\\java\\com\\qa\\property\\config.properties");
 			prop.load(ip);
 			
 			
