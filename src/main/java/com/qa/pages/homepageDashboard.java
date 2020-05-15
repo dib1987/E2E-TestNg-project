@@ -32,14 +32,14 @@ public class homepageDashboard extends Base_Setup {
 		return driver.getTitle();
 	}
 	
-	public homePage verifylocation() throws InterruptedException {
+	public  void verifylocation() throws InterruptedException {
 		
 		location.sendKeys(prop.getProperty("postcode"));
 		confirmbutton.click();
 		Thread.sleep(2000);
 		continuebutton.click();
 		
-		return new homePage();
+		//return new homePage();
 	}
 
 }

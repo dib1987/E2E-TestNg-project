@@ -21,7 +21,7 @@ public class Base_Setup {
 		try {
 			
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("C:\\work\\Automation Learning\\Automation-testing-practise\\src\\main\\java\\com\\qa\\property\\config.properties");
+			FileInputStream ip = new FileInputStream("C:\\work\\Automation canada\\Automation-testing-practise\\src\\main\\java\\com\\qa\\property\\config.properties");
 			prop.load(ip);
 			
 			
@@ -51,6 +51,7 @@ public class Base_Setup {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 	}
 	
 	

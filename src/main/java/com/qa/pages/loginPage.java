@@ -12,24 +12,20 @@ import com.qa.Testdata.Testdata;
 
 public class loginPage extends Base_Setup {
 	
-	public static String Path = "C:\\work\\TestData.xls";
-	public static String SheetName ="login";
+	//public static String Path = "C:\\work\\TestData.xls";
+	//public static String SheetName ="login";
 	
 	
-	@FindBy(xpath="//input[@id='user']")
-	WebElement userid;
 	
-	@FindBy(xpath="//input[@id='pwd']")
-	WebElement password;
-	
-	@FindBy(xpath="//input[@type='submit']")
-	WebElement submitbutton;
 	
 	@FindBy(xpath="//*[@id='txtUsername']")
 	WebElement username;
 	
 	@FindBy(xpath="//*[@id='txtPassword']")
 	WebElement pwd;
+	
+	@FindBy(xpath="//*[@id='btnLogin']")
+	WebElement loginbutton;
 	
 	
 	
@@ -63,7 +59,7 @@ public class loginPage extends Base_Setup {
 	
 	// This is login where user is hardcoded //
 	
-	public homepageDashboard login() {
+	/*public homepageDashboard login() {
 		
 		//username.sendKeys(prop.getProperty(username1));
 		
@@ -71,6 +67,35 @@ public class loginPage extends Base_Setup {
 		pwd.sendKeys("admin123");
 		
 		return new homepageDashboard();
+		
+		
+		
+		
+		
+		
+	}*/
+	
+	// This is login where user is retriving data from properties file //
+	
+     public homepageDashboard login(String un,String pd) {
+    	 
+    	 username.click();
+    	 
+    	
+		
+		username.sendKeys(un);
+		
+		
+		
+		pwd.sendKeys(pd);
+		
+		loginbutton.click();
+    	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		return new homepageDashboard();
+		
+		
 		
 		
 		

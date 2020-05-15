@@ -14,7 +14,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.kits.sit.Base_Setup.Base_Setup;
-import com.qa.pages.homePage;
 import com.qa.pages.homepageDashboard;
 import com.qa.pages.loginPage;
 
@@ -44,11 +43,23 @@ public class loginPagetest extends Base_Setup {
 	}
 	
 	
+	//This is using hardcoded //
 	
-	@Test(priority=2)
+	
+	/*@Test(priority=2)
 	public void verifylogintest() throws IOException {
 		
 		homepagedash = loginp.login();
+	}*/
+	
+	
+	// login using value from properties file //
+	
+	@Test(priority=2)
+	
+	public void verifylogintest() {
+		
+		homepagedash=loginp.login(prop.getProperty("username1"), prop.getProperty("password1"));
 	}
 	
 	@AfterMethod
