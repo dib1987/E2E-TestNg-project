@@ -8,13 +8,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.qa.testcases.loginPagetest">
+      <class name="com.qa.testcases.homepageDashboardtest">
         <methods>
           <include name="teardown"/>
+          <include name="validateDashboardPageTexttest"/>
           <include name="setup"/>
-          <include name="verifylogintest"/>
         </methods>
-      </class> <!-- com.qa.testcases.loginPagetest -->
+      </class> <!-- com.qa.testcases.homepageDashboardtest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
