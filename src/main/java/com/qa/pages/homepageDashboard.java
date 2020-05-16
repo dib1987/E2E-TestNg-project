@@ -18,6 +18,10 @@ public class homepageDashboard extends Base_Setup {
 	@FindBy(xpath="//input[@value='Continue']")
 	WebElement continuebutton;
 	
+	@FindBy(xpath="//*[@id=\"content\"]/div/div[1]/h1")
+	WebElement dashboard;
+	
+	
 	// Initializing the Page object //
 	
 	public homepageDashboard() {
@@ -27,19 +31,14 @@ public class homepageDashboard extends Base_Setup {
 	
 	//Actions//
 	
-	public String locationpagetitle() {
+	public String dashboardpagetitle() {
 		
 		return driver.getTitle();
 	}
 	
-	public  void verifylocation() throws InterruptedException {
+	public boolean verifyDashboardPage() {
 		
-		location.sendKeys(prop.getProperty("postcode"));
-		confirmbutton.click();
-		Thread.sleep(2000);
-		continuebutton.click();
-		
-		//return new homePage();
+		return dashboard.isDisplayed();
 	}
 
 }

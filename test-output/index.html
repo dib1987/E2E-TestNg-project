@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\work\Automation canada\Automation-testing-practise\testng.xml</span>
+                    <span>C:\work\Automation Learning\Automation-testing-practise\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +100,16 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.testcases.homepageDashboardtest" class="method navigator-link" hash-for-method="validateDashboardPageTexttest">validateDashboardPageTexttest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.testcases.homepageDashboardtest" class="method navigator-link" hash-for-method="validateDashboardPagetitletest">validateDashboardPagetitletest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.qa.testcases.loginPagetest" class="method navigator-link" hash-for-method="validatelogintitletest">validatelogintitletest</a> <!-- method navigator-link -->
@@ -125,6 +135,28 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">com.qa.testcases.homepageDashboardtest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDashboardPageTexttest">
+                  </a> <!-- validateDashboardPageTexttest -->
+                  <span class="method-name">validateDashboardPageTexttest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDashboardPagetitletest">
+                  </a> <!-- validateDashboardPagetitletest -->
+                  <span class="method-name">validateDashboardPagetitletest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">com.qa.testcases.loginPagetest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -147,7 +179,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\work\Automation canada\Automation-testing-practise\testng.xml</span>
+            <span class="header-content">C:\work\Automation Learning\Automation-testing-practise\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -161,6 +193,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.qa.testcases.homepageDashboardtest&quot;/&gt;
       &lt;class name=&quot;com.qa.testcases.loginPagetest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
@@ -175,7 +208,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -201,20 +234,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifylogintest')
 data.setCell(0, 2, 'com.qa.testcases.loginPagetest')
-data.setCell(0, 3, 2704);
+data.setCell(0, 3, 2186);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validatelogintitletest')
-data.setCell(1, 2, 'com.qa.testcases.loginPagetest')
-data.setCell(1, 3, 26);
+data.setCell(1, 1, 'validateDashboardPageTexttest')
+data.setCell(1, 2, 'com.qa.testcases.homepageDashboardtest')
+data.setCell(1, 3, 1872);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'validateDashboardPagetitletest')
+data.setCell(2, 2, 'com.qa.testcases.homepageDashboardtest')
+data.setCell(2, 3, 39);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'validatelogintitletest')
+data.setCell(3, 2, 'com.qa.testcases.loginPagetest')
+data.setCell(3, 3, 21);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -240,30 +281,63 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.qa.testcases.loginPagetest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.qa.testcases.homepageDashboardtest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">validatelogintitletest</span>
-                <span class="method-start">10552 ms</span>
+                <span class="method-name">validateDashboardPagetitletest</span>
+                <span class="method-start">13465 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">11089 ms</span>
+                <span class="method-start">15255 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.testcases.loginPagetest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">12228 ms</span>
+                <span class="method-start">15969 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validatelogintitletest</span>
+                <span class="method-start">25117 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">25583 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.testcases.homepageDashboardtest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">26738 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateDashboardPageTexttest</span>
+                <span class="method-start">38414 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">40735 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.testcases.loginPagetest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">41904 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifylogintest</span>
-                <span class="method-start">21427 ms</span>
+                <span class="method-start">51345 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">26085 ms</span>
+                <span class="method-start">55487 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
