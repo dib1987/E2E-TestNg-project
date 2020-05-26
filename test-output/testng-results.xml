@@ -2,58 +2,58 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-17T06:17:38Z" name="Suite" finished-at="2020-05-17T06:18:32Z" duration-ms="54112">
+  <suite started-at="2020-05-26T12:20:52Z" name="Suite" finished-at="2020-05-26T12:22:23Z" duration-ms="91014">
     <groups>
     </groups>
-    <test started-at="2020-05-17T06:17:38Z" name="Test" finished-at="2020-05-17T06:18:32Z" duration-ms="54112">
+    <test started-at="2020-05-26T12:20:52Z" name="Test" finished-at="2020-05-26T12:22:23Z" duration-ms="91014">
       <class name="com.qa.testcases.homepageDashboardtest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-17T06:17:38Z" name="setup" finished-at="2020-05-17T06:17:50Z" duration-ms="12751" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-26T12:20:52Z" name="setup" finished-at="2020-05-26T12:21:18Z" duration-ms="26474" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validateDashboardPagetitletest()[pri:1, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-17T06:17:50Z" name="validateDashboardPagetitletest" finished-at="2020-05-17T06:17:50Z" duration-ms="28" status="PASS">
+        <test-method signature="validateDashboardPagetitletest()[pri:1, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-26T12:21:18Z" name="validateDashboardPagetitletest" finished-at="2020-05-26T12:21:18Z" duration-ms="26" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateDashboardPagetitletest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-17T06:17:52Z" name="teardown" finished-at="2020-05-17T06:17:53Z" duration-ms="1053" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-26T12:21:21Z" name="teardown" finished-at="2020-05-26T12:21:22Z" duration-ms="735" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-17T06:18:03Z" name="setup" finished-at="2020-05-17T06:18:15Z" duration-ms="11634" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-26T12:21:34Z" name="setup" finished-at="2020-05-26T12:21:53Z" duration-ms="19120" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validateDashboardPageTexttest()[pri:2, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-17T06:18:15Z" name="validateDashboardPageTexttest" finished-at="2020-05-17T06:18:17Z" duration-ms="1738" status="PASS">
+        <test-method signature="validateDashboardPageTexttest()[pri:2, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-26T12:21:53Z" name="validateDashboardPageTexttest" finished-at="2020-05-26T12:21:56Z" duration-ms="3325" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateDashboardPageTexttest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-17T06:18:17Z" name="teardown" finished-at="2020-05-17T06:18:18Z" duration-ms="663" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-26T12:21:57Z" name="teardown" finished-at="2020-05-26T12:21:57Z" duration-ms="680" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.qa.testcases.homepageDashboardtest -->
       <class name="com.qa.testcases.loginPagetest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-17T06:17:53Z" name="setup" finished-at="2020-05-17T06:18:02Z" duration-ms="8988" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-26T12:21:22Z" name="setup" finished-at="2020-05-26T12:21:32Z" duration-ms="10098" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validatelogintitletest()[pri:1, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-17T06:18:02Z" name="validatelogintitletest" finished-at="2020-05-17T06:18:02Z" duration-ms="25" status="PASS">
+        <test-method signature="validatelogintitletest()[pri:1, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-26T12:21:32Z" name="validatelogintitletest" finished-at="2020-05-26T12:21:32Z" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validatelogintitletest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-17T06:18:03Z" name="teardown" finished-at="2020-05-17T06:18:03Z" duration-ms="677" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-26T12:21:33Z" name="teardown" finished-at="2020-05-26T12:21:34Z" duration-ms="1147" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-17T06:18:18Z" name="setup" finished-at="2020-05-17T06:18:27Z" duration-ms="8726" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-26T12:21:57Z" name="setup" finished-at="2020-05-26T12:22:08Z" duration-ms="10275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifylogintest()[pri:2, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-17T06:18:27Z" name="verifylogintest" finished-at="2020-05-17T06:18:29Z" duration-ms="2214" status="PASS">
+        <test-method signature="verifylogintest()[pri:2, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-26T12:22:08Z" name="verifylogintest" finished-at="2020-05-26T12:22:18Z" duration-ms="10493" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifylogintest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-17T06:18:31Z" name="teardown" finished-at="2020-05-17T06:18:32Z" duration-ms="675" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-26T12:22:22Z" name="teardown" finished-at="2020-05-26T12:22:23Z" duration-ms="673" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

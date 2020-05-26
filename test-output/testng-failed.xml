@@ -12,9 +12,18 @@
         <methods>
           <include name="teardown"/>
           <include name="validateDashboardPageTexttest"/>
+          <include name="validateDashboardPagetitletest"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.qa.testcases.homepageDashboardtest -->
+      <class name="com.qa.testcases.loginPagetest">
+        <methods>
+          <include name="validatelogintitletest"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="verifylogintest"/>
+        </methods>
+      </class> <!-- com.qa.testcases.loginPagetest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
