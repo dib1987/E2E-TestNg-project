@@ -37,11 +37,11 @@ public class Base_Setup {
 		
 		String browserName = prop.getProperty("browser");
 		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver","C:\\work\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","C:\\work\\chromedriver_win32 (3)\\chromedriver.exe");
 			driver = new ChromeDriver();
 			
 		}else if(browserName.equals("FF")) {
-			System.setProperty("webdriver.gecko.driver","C:\\work\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.gecko.driver","C:\\work\\chromedriver_win32 (3)\\chromedriver.exe");
 			
 		}
 		Actions action = new Actions(driver);
