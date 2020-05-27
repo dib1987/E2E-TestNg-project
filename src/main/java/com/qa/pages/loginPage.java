@@ -3,6 +3,7 @@ package com.qa.pages;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -19,13 +20,22 @@ public class loginPage extends Base_Setup {
 	
 	
 	@FindBy(xpath="//*[@id='txtUsername']")
-	WebElement username;
+	 WebElement username;
+	
+	
+	
 	
 	@FindBy(xpath="//*[@id='txtPassword']")
 	WebElement pwd;
 	
 	@FindBy(xpath="//*[@id='btnLogin']")
 	WebElement loginbutton;
+	
+	//Encapsulation concept , private variable public methods//
+	
+	private By uname = By.xpath("//*[@id='txtUsername']");
+	private By password = By.xpath("//*[@id='txtPassword']");
+	private By clicklogbutton = By.xpath("//*[@id='btnLogin']");
 	
 	
 	
@@ -58,13 +68,19 @@ public class loginPage extends Base_Setup {
 	}*/
 	
 	// This is login where user is hardcoded //
+	// here we are using encapsulation concept, private variable and public method//
 	
-	/*public homepageDashboard login() {
+	/*public homepageDashboard verifylogin() {
 		
 		//username.sendKeys(prop.getProperty(username1));
 		
-		username.sendKeys("admin");
-		pwd.sendKeys("admin123");
+		//uname.sendKeys("admin");
+		driver.findElement(uname).sendKeys("admin");
+		driver.findElement(password).sendKeys("admin123");
+		driver.findElement(clicklogbutton).click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		//pwd.sendKeys("admin123");
 		
 		return new homepageDashboard();
 		
@@ -79,17 +95,22 @@ public class loginPage extends Base_Setup {
 	
      public homepageDashboard login(String un,String pd) {
     	 
-    	 username.click();
+    	 //username.click();
     	 
     	
 		
-		username.sendKeys(un);
+		//username.sendKeys(un);
 		
 		
 		
-		pwd.sendKeys(pd);
+		//pwd.sendKeys(pd);
 		
-		loginbutton.click();
+		//loginbutton.click();
+    	 
+    	 driver.findElement(uname).click();
+    	 driver.findElement(uname).sendKeys(un);
+    	 driver.findElement(password).sendKeys(pd);
+    	 driver.findElement(clicklogbutton).click();
     	
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
