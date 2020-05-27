@@ -16,13 +16,19 @@ public class Base_Setup {
 	public static WebDriver driver;
 	public static Properties prop;
 	
+	public static String path = System.getProperty("user.dir");
+	
+	
+	
 	public Base_Setup() {
 		
 		try {
 			
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("C:\\work\\Automation canada\\Automation-testing-practise\\src\\main\\java\\com\\qa\\property\\config.properties");
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\property\\config.properties");
 			prop.load(ip);
+			
+			
 			
 			
 		}catch(FileNotFoundException e) {
@@ -37,7 +43,7 @@ public class Base_Setup {
 		
 		String browserName = prop.getProperty("browser");
 		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver","C:\\work\\chromedriver_win32 (3)\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver",path+"\\src\\main\\java\\resources\\chromedriver.exe");
 			driver = new ChromeDriver();
 			
 		}else if(browserName.equals("FF")) {
@@ -47,8 +53,8 @@ public class Base_Setup {
 		Actions action = new Actions(driver);
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
