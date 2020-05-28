@@ -38,7 +38,7 @@ public class loginPage extends Base_Setup {
 	private By clicklogbutton = By.xpath("//*[@id='btnLogin']");
 	
 	
-	
+	// Encapsulation concept//
 	//Initialize the webelement//
 	
 	public loginPage() {
