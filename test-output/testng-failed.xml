@@ -18,7 +18,6 @@
       </class> <!-- com.qa.testcases.homepageDashboardtest -->
       <class name="com.qa.testcases.loginPagetest">
         <methods>
-          <include name="validatelogintitletest"/>
           <include name="teardown"/>
           <include name="setup"/>
           <include name="verifylogintest"/>

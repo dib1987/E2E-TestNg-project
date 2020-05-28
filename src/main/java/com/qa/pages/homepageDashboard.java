@@ -1,5 +1,6 @@
 package com.qa.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -19,7 +20,10 @@ public class homepageDashboard extends Base_Setup {
 	WebElement continuebutton;
 	
 	@FindBy(xpath="//*[@id=\"content\"]/div/div[1]/h1")
-	WebElement dashboard;
+	WebElement dashboard1;
+	
+	
+	private By dashboard =By.xpath("//*[@id=\"content\"]/div/div[1]/h1");
 	
 	
 	// Initializing the Page object //
@@ -38,7 +42,7 @@ public class homepageDashboard extends Base_Setup {
 	
 	public boolean verifyDashboardPage() {
 		
-		return dashboard.isDisplayed();
+		return driver.findElement(dashboard).isDisplayed();
 	}
 
 }
