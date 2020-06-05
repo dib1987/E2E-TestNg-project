@@ -1,63 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-28T09:55:43Z" name="Suite" finished-at="2020-05-28T09:57:21Z" duration-ms="97977">
+  <suite started-at="2020-06-05T08:05:58Z" name="Default suite" finished-at="2020-06-05T08:06:17Z" duration-ms="19312">
     <groups>
     </groups>
-    <test started-at="2020-05-28T09:55:43Z" name="Test" finished-at="2020-05-28T09:57:21Z" duration-ms="97977">
-      <class name="com.qa.testcases.homepageDashboardtest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-28T09:55:44Z" name="setup" finished-at="2020-05-28T09:56:07Z" duration-ms="23211" status="PASS">
+    <test started-at="2020-06-05T08:05:58Z" name="Default test" finished-at="2020-06-05T08:06:17Z" duration-ms="19312">
+      <class name="com.qa.testcases.LeavePageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.LeavePageTest@6107227e]" started-at="2020-06-05T08:05:58Z" name="setup" finished-at="2020-06-05T08:06:16Z" duration-ms="17581" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validateDashboardPagetitletest()[pri:1, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-28T09:56:07Z" name="validateDashboardPagetitletest" finished-at="2020-05-28T09:56:07Z" duration-ms="36" status="PASS">
+        <test-method signature="validateLeaveTest()[pri:1, instance:com.qa.testcases.LeavePageTest@6107227e]" started-at="2020-06-05T08:06:16Z" name="validateLeaveTest" finished-at="2020-06-05T08:06:17Z" duration-ms="1678" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateDashboardPagetitletest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-28T09:56:07Z" name="teardown" finished-at="2020-05-28T09:56:08Z" duration-ms="684" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-28T09:56:20Z" name="setup" finished-at="2020-05-28T09:56:54Z" duration-ms="34146" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="validateDashboardPageTexttest()[pri:2, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-28T09:56:54Z" name="validateDashboardPageTexttest" finished-at="2020-05-28T09:56:54Z" duration-ms="105" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateDashboardPageTexttest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.testcases.homepageDashboardtest@60611244]" started-at="2020-05-28T09:56:54Z" name="teardown" finished-at="2020-05-28T09:56:55Z" duration-ms="653" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.qa.testcases.homepageDashboardtest -->
-      <class name="com.qa.testcases.loginPagetest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-28T09:56:08Z" name="setup" finished-at="2020-05-28T09:56:19Z" duration-ms="10534" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="validatelogintitletest()[pri:1, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-28T09:56:19Z" name="validatelogintitletest" finished-at="2020-05-28T09:56:19Z" duration-ms="22" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatelogintitletest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-28T09:56:19Z" name="teardown" finished-at="2020-05-28T09:56:20Z" duration-ms="663" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-28T09:56:55Z" name="setup" finished-at="2020-05-28T09:57:08Z" duration-ms="13196" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifylogintest()[pri:2, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-28T09:57:08Z" name="verifylogintest" finished-at="2020-05-28T09:57:20Z" duration-ms="12171" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifylogintest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.testcases.loginPagetest@3745e5c6]" started-at="2020-05-28T09:57:21Z" name="teardown" finished-at="2020-05-28T09:57:21Z" duration-ms="657" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.qa.testcases.loginPagetest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- validateLeaveTest -->
+      </class> <!-- com.qa.testcases.LeavePageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

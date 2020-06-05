@@ -20,6 +20,7 @@ class-name="com.qa.analyzer.MyTransformer"/>
     
       <class name="com.qa.testcases.homepageDashboardtest"/>
       <class name="com.qa.testcases.loginPagetest"/>
+      <class name="com.qa.testcases.LeavePageTest"/>
       
     </classes>
   </test> <!-- Test -->
