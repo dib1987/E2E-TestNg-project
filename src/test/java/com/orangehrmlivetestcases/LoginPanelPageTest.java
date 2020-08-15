@@ -24,12 +24,4 @@ public class LoginPanelPageTest extends BaseTests{
 	}
 
 	
-	@Test
-	public void validateSuccessLoginTest1() {
-		 Home_DashboardPage homeDashboard = loginPanelPage.userLogin("Admin1",
-		 "admin1234"); assertTrue(homeDashboard.getWelcomeMessage().contains("Admin1")
-		 ,"Usuario no realizo login con exito1");
-	}
-
-	
 }
